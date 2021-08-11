@@ -1,9 +1,11 @@
 import { normalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     ${normalize}
+
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
     /* Box sizing rules */
     *,
     *::before,

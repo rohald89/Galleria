@@ -31,7 +31,7 @@ const Gallery = () => {
         >
             {/* <h1 className="sr-only">Main Gallery</h1> */}
             { data.map((painting, index) => {
-                return < GalleryCard {...painting} key={index}/>
+                return < GalleryCard {...painting} id={index} key={index}/>
             })}
         </GalleryStyles>
     )

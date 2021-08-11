@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const GalleryItem = styled.figure`
+export const GalleryItem = styled(Link)`
     position: relative;
+    
     
     img {
         width: 100%;
+        &:hover {
+            opacity: 0.5;
+        }
     }
 `;
 
@@ -21,6 +26,7 @@ export const GalleryCaption = styled.figcaption`
     padding-left: 3.2rem;
     padding-right: 4.6rem;
     color: white;
+    pointer-events: none;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
 
     h2 {
