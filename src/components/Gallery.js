@@ -1,33 +1,39 @@
-import React from 'react';
-import Masonry from 'react-masonry-css';
+import React, {useEffect} from 'react';
+import Macy from 'macy';
 
 import data from '../data/data.json';
-import { Wrapper } from '../styles/GlobalStyles';
+import { GalleryStyles } from '../styles/GalleryStyles';
 import GalleryCard from './GalleryCard';
 
-const Gallery = () => {
+const macyOptions = {
+  container: '#macy-container',
+  mobileFirst: true,
+  margin: 24,
+  columns: 1,
+  breakAt: {
+    1200: 4,
+    950: 3,
+    650: {
+      margin: 40,
+      columns: 2,
+    },
+  },
+};
 
-    const breakpointColumnsObj = {
-        default: 4,
-        1100: 3,
-        700: 2,
-        500: 1
-      };
+const Gallery = () => {
+    useEffect(() => {
+        new Macy(macyOptions)
+    }, [])
 
     return (
-        <Wrapper>
-            <h1 className="sr-only">Main Gallery</h1>
-            <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="masonry-grid"
-                columnClassName="masonry-grid-column"
-            >
-                { data.map((painting, index) => {
-                    return <GalleryCard {...painting} id={index} key={index} />
-                })
-                }
-            </Masonry>
-        </Wrapper>
+        <GalleryStyles
+            id="macy-container"
+        >
+            {/* <h1 className="sr-only">Main Gallery</h1> */}
+            { data.map((painting, index) => {
+                return < GalleryCard {...painting} key={index}/>
+            })}
+        </GalleryStyles>
     )
 }
 

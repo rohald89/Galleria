@@ -38,6 +38,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html {
         font-size: 62.5%;
+        font-family: 'Libre Baskerville', serif;
     }
 
     /* Set core body defaults */
@@ -96,23 +97,4 @@ export const GlobalStyles = createGlobalStyle`
       width: 1px !important;
       white-space: nowrap !important;
     }
-`;
-
-export const Wrapper = styled.div`
-
-    padding: 2.4rem;
-  .masonry-grid {
-    display: flex;
-    margin-left: -30px; /* gutter size offset */
-    width: auto;
-  }
-  .masonry-grid-column {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-  }
-
-  /* Style your items */
-  .masonry-grid-column > figure { /* change div to reference your elements you put in <Masonry> */
-    margin-bottom: 30px;
-  }
 `;
