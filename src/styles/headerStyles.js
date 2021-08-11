@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 
-export const StyledHeader = styled(motion.div)`
+export const StyledHeader = styled(motion.header)`
   height: 7.9rem;
   display: flex;
   justify-content: space-between;
@@ -21,5 +21,10 @@ export const StyledHeader = styled(motion.div)`
       text-decoration: none;
       color: #7d7d7d;
       text-transform: uppercase;
+      transition: .3s ease;
+
+      &:hover {
+          color: #000;
+      }
   }
 `;
