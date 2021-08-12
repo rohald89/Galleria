@@ -63,8 +63,21 @@ export const SlideshowInformation = styled.div`
         transform: translateY(-70%);
         z-index: -1;
     }
-    font-weight: bold;
-    font-size: 1.4rem;
-    line-height: 2.8rem;
-    color: #7d7d7d;
+
+    p {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        color: #7d7d7d;
+        margin-bottom: 4rem;
+    }
+
+    a {
+        font-weight: bold;
+        font-size: .9rem;
+        line-height: 1.1rem;
+        letter-spacing: 1.92857px;
+        text-decoration-line: underline;
+        color: #7d7d7d;
+    }
 `;

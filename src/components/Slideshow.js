@@ -22,7 +22,7 @@ const Slideshow = () => {
             <SlideshowInformation>
                 <span>{year}</span>
                 <p>{description}</p>
-                <a href={source}>Go to source</a>
+                <a href={source}>GO TO SOURCE</a>
             </SlideshowInformation>
         </SlideshowStyles>
     )
