@@ -4,7 +4,11 @@ export const NavStyles = styled.nav`
     display: flex;
     align-items: center;
     padding: 1.7rem 2.4rem;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
 
     &:before {
         content: "";

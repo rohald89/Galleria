@@ -5,9 +5,13 @@ import back from '../assets/icon-back-button.svg';
 import next from '../assets/icon-next-button.svg';
 import { NavStyles } from '../styles/NavStyles';
 
-const SlideshowNav = (props) => {
-    const { painting, setPainting } = useContext(Context);
-    const { name, artist } = data[painting]
+const SlideshowNav = () => {
+    const { painting, setPainting, page, setPage } = useContext(Context);
+    const { name, artist } = data[painting];
+
+    const paginate = (newDirection) => {
+        setPage([page + newDirection, newDirection]);
+    };
 
     return (
 
@@ -16,8 +20,8 @@ const SlideshowNav = (props) => {
                 <h2>{name}</h2>
                 <p>{artist.name}</p>
             </div>
-            <button disabled={painting === 0} onClick={() => setPainting(painting - 1)}><img src={back} /></button>
-            <button disabled={painting === 14} painting onClick={() => setPainting(painting + 1)}><img src={next} /></button>
+            <button disabled={painting === 0} onClick={() => { setPainting(painting - 1); paginate(-1)} }><img src={back} /></button>
+            <button disabled={painting === 14} onClick={() => {setPainting(painting + 1); paginate(1)}}><img src={next} /></button>
         </NavStyles>
     )
 }

@@ -173,7 +173,7 @@
     "images": {
       "thumbnail": "./assets/lady-with-an-ermine/thumbnail.jpg",
       "hero": {
-        "small": "./assets/lady-with-an-ermine/hero-small.jpg",
+        "small": "./assets/lady-with-an-ermine/mobile/hero.jpg",
         "large": "./assets/lady-with-an-ermine/hero-large.jpg"
       },
       "gallery": "./assets/lady-with-an-ermine/gallery.jpg"
