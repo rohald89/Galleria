@@ -8,22 +8,34 @@ export const SlideshowStyles = styled.div`
     @media (min-width: 750px) {
         margin: 4rem;
     }
-    @media (min-width: 1200px) {
-        
+    @media (min-width: 1400px) {
+        margin: 10rem auto;
+        justify-content: center;
         flex-direction: row;
     }
 `;
 
 export const SlideshowImages = styled.div`
+    
+
+    @media (min-width: 750px) {
+        width: 68.8rem;
+        margin: 0 auto;
+    }
+    @media (min-width: 1400px) {
+        width: 85.5rem;
+        margin: 0;
+    }
+
     figure {
         position: relative;
         background: white;
 
         @media (min-width: 750px) {
-            max-width: 80rem;
-            margin: 0 auto;
+            width: 47.5rem;
         }
-        img {
+
+        & picture img {
             @media (min-width: 750px) {
                 height: 56rem;
             }
@@ -44,8 +56,12 @@ export const SlideshowImages = styled.div`
                 top: 0;
                 padding: 0;
                 padding: 0 6.5rem 6.7rem 6.5rem;
-                transform: translateY(-1px);
+                transform: translate(50%, -1px);
                 width: 44.5rem;
+            }
+
+            @media (min-width: 1400px) {
+                transform: translate(calc(100% - 6.5rem), -1px);
             }
 
             h2 {
@@ -69,7 +85,7 @@ export const SlideshowImages = styled.div`
                 }
             }
 
-            .wrapper {
+            .artist-mobile {
                 & .artist-image {
                     position: absolute;
                     bottom: 0;
@@ -83,6 +99,24 @@ export const SlideshowImages = styled.div`
                         right: 6rem;
                     }
                 }
+                @media (min-width: 1400px) {
+                    display: none;
+                }
+            }
+
+            
+        }
+        .artist-desktop {
+            display: none;
+
+            @media (min-width: 1400px) {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 12.8rem;
+                width: 12.8rem;
+                transform: translate(calc(100% + 3rem), 50%);
             }
         }
     }
@@ -95,9 +129,15 @@ export const SlideshowInformation = styled.div`
     @media (min-width: 750px) {
         margin-top: 13rem;
     }
+    @media (min-width: 1400px) {
+        width: 47.5rem;    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     span {
         font-size: 10rem;
-        letter-spacing: 5px;
+        letter-spacing: 7px;
         font-weight: bold;
         line-height: 1;
         color: #f3f3f3;
@@ -113,6 +153,10 @@ export const SlideshowInformation = styled.div`
             left: 0;
             transform: translateY(-50%);
         }
+        @media (min-width: 1400px) {
+            left: 4.6rem;
+            transform: translateY(-70%);
+        }
     }
     
     p {
@@ -120,10 +164,15 @@ export const SlideshowInformation = styled.div`
         font-size: 1.4rem;
         line-height: 2.8rem;
         color: #7d7d7d;
-        margin-bottom: 4rem;
+        margin: 0 auto 4rem;
 
         @media (min-width: 750px) {
-            padding: 0 11.5rem;
+            width: 45.7rem;
+        }
+        @media (min-width: 1400px) {
+            width: 35rem;
+            margin: 0;
+            margin-bottom: 8rem;
         }
     }
 
@@ -137,27 +186,9 @@ export const SlideshowInformation = styled.div`
         letter-spacing: 1.92857px;
 
         @media (min-width: 750px) {
-            margin-left: 11.5rem;
+            display: block;
+            width: 35rem;
+            margin: 0;
         }
     }
-<<<<<<< HEAD
-
-    p {
-        font-weight: bold;
-        font-size: 1.4rem;
-        line-height: 2.8rem;
-        color: #7d7d7d;
-        margin-bottom: 4rem;
-    }
-
-    a {
-        font-weight: bold;
-        font-size: .9rem;
-        line-height: 1.1rem;
-        letter-spacing: 1.92857px;
-        text-decoration-line: underline;
-        color: #7d7d7d;
-    }
-=======
->>>>>>> 64578d0cef3c1877fdb7f181f734ca9a1330e4ce
 `;

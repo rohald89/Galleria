@@ -20,10 +20,13 @@ const Slideshow = () => {
                         <figcaption>
                             <h2>{name}</h2>
                             <p>{artist.name}</p>
-                            <div className="wrapper">
+                            <div className="artist-mobile">
                                 <img className="artist-image" src={artist.image} alt={artist.name} />
                             </div>
                         </figcaption>
+                        <div className="artist-desktop">
+                                <img className="artist-image" src={artist.image} alt={artist.name} />
+                        </div>
                     </figure>
                 </SlideshowImages>
                 <SlideshowInformation>
