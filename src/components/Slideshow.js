@@ -13,13 +13,18 @@ const Slideshow = () => {
             <SlideshowStyles>
                 <SlideshowImages>
                     <figure>
-                        <img src={images.hero.small} alt={name} />
+                        <picture>
+                            <source srcSet={images.hero.large} media="(min-width: 750px)"/>
+                            <img src={images.hero.small} alt={name} />
+                        </picture>
                         <figcaption>
                             <h2>{name}</h2>
                             <p>{artist.name}</p>
+                            <div className="wrapper">
+                                <img className="artist-image" src={artist.image} alt={artist.name} />
+                            </div>
                         </figcaption>
                     </figure>
-                    <img src={artist.image} alt={artist.name} />
                 </SlideshowImages>
                 <SlideshowInformation>
                     <span>{year}</span>
