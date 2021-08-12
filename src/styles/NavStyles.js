@@ -30,7 +30,18 @@ export const NavStyles = styled.nav`
         margin-right: auto;
     }
 
-    a {
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: .3s ease-in;
+
+        &:hover {
+            opacity: .6;
+        }
+        &:disabled {
+            opacity: .4;
+        }
         img {
             height: 1.6rem;
         }

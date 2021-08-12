@@ -16,8 +16,8 @@ const SlideshowNav = (props) => {
                 <h2>{name}</h2>
                 <p>{artist.name}</p>
             </div>
-            <a disabled={painting === 0} onClick={() => setPainting(painting - 1)}><img src={back} /></a>
-            <a disabled={painting === 15} painting onClick={() => setPainting(painting + 1)}><img src={next} /></a>
+            <button disabled={painting === 0} onClick={() => setPainting(painting - 1)}><img src={back} /></button>
+            <button disabled={painting === 14} painting onClick={() => setPainting(painting + 1)}><img src={next} /></button>
         </NavStyles>
     )
 }

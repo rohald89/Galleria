@@ -185,6 +185,10 @@ export const SlideshowInformation = styled.div`
         line-height: 1.1rem;
         letter-spacing: 1.92857px;
 
+        &:hover {
+            color: black;
+        }
+
         @media (min-width: 750px) {
             display: block;
             width: 35rem;
