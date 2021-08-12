@@ -20,8 +20,8 @@ const SlideshowNav = () => {
                 <h2>{name}</h2>
                 <p>{artist.name}</p>
             </div>
-            <button disabled={painting === 0} onClick={() => { setPainting(painting - 1); paginate(-1)} }><img src={back} /></button>
-            <button disabled={painting === 14} onClick={() => {setPainting(painting + 1); paginate(1)}}><img src={next} /></button>
+            <button disabled={painting === 0} onClick={() => { setPainting(painting - 1); paginate(-1)} }><img src={back} alt="back button"/></button>
+            <button disabled={painting === 14} onClick={() => {setPainting(painting + 1); paginate(1)}}><img src={next} alt="next button"/></button>
         </NavStyles>
     )
 }
