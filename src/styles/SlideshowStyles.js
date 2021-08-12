@@ -20,9 +20,8 @@ export const SlideshowImages = styled.div`
             background-color: white;
             bottom: 0;
             left: 0;
-            height: 10.4rem;
             width: 28rem;
-            transform: translate(-1px, 50%);
+            transform: translate(-1px, 5.4rem);
             padding: 2.4rem;
 
             h2 {
@@ -40,7 +39,7 @@ export const SlideshowImages = styled.div`
     }
 
     & img:last-child {
-        transform: translateY(5rem);
+        transform: translateY(5.4rem);
         width: 6.4rem;
         height: 6.4rem;
         margin-left: 1.6rem;
