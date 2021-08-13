@@ -4,6 +4,7 @@ import Macy from 'macy';
 import data from '../data/data.json';
 import { GalleryStyles } from '../styles/GalleryStyles';
 import GalleryCard from './GalleryCard';
+import { AnimatePresence } from 'framer-motion';
 
 const macyOptions = {
   container: '#macy-container',
@@ -27,12 +28,13 @@ const Gallery = () => {
 
     return (
         <GalleryStyles
-            id="macy-container"
+        id="macy-container"
         >
-            {/* <h1 className="sr-only">Main Gallery</h1> */}
+          <AnimatePresence>
             { data.map((painting, index) => {
-                return < GalleryCard {...painting} id={index} key={index}/>
+                return <GalleryCard {...painting} id={index} key={index}/>
             })}
+          </AnimatePresence>
         </GalleryStyles>
     )
 }

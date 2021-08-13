@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const GalleryItem = styled(Link)`
-    position: relative;
-    
-    
     img {
         width: 100%;
         transition: opacity .2s ease-in;
