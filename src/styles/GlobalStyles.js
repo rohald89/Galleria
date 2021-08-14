@@ -48,6 +48,7 @@ export const GlobalStyles = createGlobalStyle`
       min-height: 100vh;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     /* A elements that don't have a class get default styles */

@@ -11,7 +11,6 @@ const variants = {
         delay: i * 0.05,
         duration: 0.35,
       },
-    //   zIndex: 1,
     }),
     initial: i => ({
         opacity: 0,
