@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Gallery from "./components/Gallery";
-import Slideshow from "./components/Slideshow";
+import Gallery from "./components/gallery/Gallery";
+import Slideshow from "./components/slideshow/Slideshow";
 import Header from "./components/Header";
 import { GlobalStyles } from "./styles/GlobalStyles";
 

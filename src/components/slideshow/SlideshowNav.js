@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import data from '../data/data.json';
-import { Context } from './context';
-import back from '../assets/icon-back-button.svg';
-import next from '../assets/icon-next-button.svg';
-import { NavStyles } from '../styles/NavStyles';
+import data from '../../data/data.json';
+import { Context } from '../../context';
+import back from '../../assets/icon-back-button.svg';
+import next from '../../assets/icon-next-button.svg';
+import { NavStyles } from '../../styles/slideshow/NavStyles';
 
 const SlideshowNav = () => {
     const { painting, setPainting, page, setPage } = useContext(Context);

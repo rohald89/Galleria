@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React, { useContext } from 'react';
-import { GalleryItem, GalleryCaption } from '../styles/GalleryItem'
-import { Context } from './context';
+import { GalleryItem, GalleryCaption } from '../../styles/gallery/GalleryItem';
+import { Context } from '../../context';
 
 const variants = {
     visible: i => ({

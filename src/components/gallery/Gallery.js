@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import Macy from 'macy';
 
-import data from '../data/data.json';
-import { GalleryStyles } from '../styles/GalleryStyles';
+import data from '../../data/data.json';
+import { GalleryStyles } from '../../styles/gallery/GalleryStyles';
 import GalleryCard from './GalleryCard';
 import { AnimatePresence } from 'framer-motion';
 

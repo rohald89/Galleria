@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Provider } from './components/context';
+import { Provider } from './context';
 
 ReactDOM.render(
   <Provider>

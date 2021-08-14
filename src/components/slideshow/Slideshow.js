@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 // import { Link } from 'react-router-dom';
-import { SlideshowImages, SlideshowStyles, SlideshowInformation } from '../styles/SlideshowStyles';
+import { SlideshowImages, SlideshowStyles, SlideshowInformation } from '../../styles/slideshow/SlideshowStyles';
 import { AnimatePresence } from 'framer-motion';
 import { wrap } from "popmotion";
 
-import { Context } from './context';
-import data from '../data/data.json';
+import { Context } from '../../context';
+import data from '../../data/data.json';
 import SlideshowNav from './SlideshowNav';
 
 const variants = {
