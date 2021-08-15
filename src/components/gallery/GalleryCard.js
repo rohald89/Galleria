@@ -24,12 +24,12 @@ const GalleryCard = ({id, name, images, artist}) => {
 
     return (
         <motion.div
-            key={id}
-            custom={id}
-            initial="initial"
-            animate="visible"
-            exit={{ opacity: 0 }}
-            variants={variants}
+            // key={id}
+            // custom={id}
+            // initial="initial"
+            // animate="visible"
+            // exit={{ opacity: 0 }}
+            // variants={variants}
         >
             <GalleryItem to="/slideshow" onClick={() => setPainting(id)}>
                     <figure>
