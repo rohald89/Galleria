@@ -8,9 +8,11 @@ const Modal = () => {
     const currentPainting = data[painting];
 
     return (
-        <ModalStyles>
-            <button onClick={() => setOpenModal(!openModal)}>Close</button>
-            <img src={currentPainting.images.gallery} alt={currentPainting.name} />
+        <ModalStyles openModal={openModal}>
+            <div>
+                <button onClick={() => setOpenModal(!openModal)}>Close</button>
+                <img src={currentPainting.images.gallery} alt={currentPainting.name} />
+            </div>
         </ModalStyles>
     )
 }

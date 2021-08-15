@@ -33,7 +33,7 @@ const variants = {
   };
 
 const Slideshow = () => {
-    const { openModal, painting, page, direction } = useContext(Context);
+    const { painting, page, direction } = useContext(Context);
     const { images, name, artist, year, description, source } = data[painting] || 0;
 
     const imageIndex = wrap(0, data.length, page);
@@ -57,7 +57,7 @@ const Slideshow = () => {
               </SlideshowStyles>
           </AnimatePresence>
           <SlideshowNav/>
-          { openModal && <Modal openModal={openModal}/> }
+          <Modal/>
         </>
     )
 }
