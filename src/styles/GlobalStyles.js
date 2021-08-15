@@ -6,12 +6,7 @@ export const GlobalStyles = createGlobalStyle`
 
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
-    /* Box sizing rules */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    
 
     /* Remove default margin */
     body,
@@ -41,6 +36,14 @@ export const GlobalStyles = createGlobalStyle`
     html {
         font-size: 62.5%;
         font-family: 'Libre Baskerville', serif;
+        box-sizing: border-box;
+    }
+
+    /* Box sizing rules */
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
     }
 
     /* Set core body defaults */

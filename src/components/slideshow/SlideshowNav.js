@@ -23,14 +23,14 @@ const SlideshowNav = () => {
               setPainting(0);
               setSlideshow(false);
             } else {
-              paginate(1)
+              paginate(1);
             }
           }, 5000 );
           return () => {
-            clearInterval(interval)
-          }
+            clearInterval(interval);
+          };
         }
-      }, [painting, slideshow, setPainting, setSlideshow, paginate])
+      }, [painting, slideshow, setPainting, setSlideshow, paginate]);
 
     return (
 
