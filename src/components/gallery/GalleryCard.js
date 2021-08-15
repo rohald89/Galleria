@@ -3,33 +3,33 @@ import React, { useContext } from 'react';
 import { GalleryItem, GalleryCaption } from '../../styles/gallery/GalleryItem';
 import { Context } from '../../context';
 
-// const variants = {
-//     visible: i => ({
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         delay: i * 0.05,
-//         duration: 0.35,
-//       },
-//     }),
-//     initial: i => ({
-//         opacity: 0,
-//         y: -100,
-//         zIndex: 99 - (1 * i),
-//     })
-// }
+const variants = {
+    visible: i => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        // delay: i * 0.05,
+        // duration: 0.35,
+      },
+    }),
+    initial: i => ({
+        opacity: 0,
+        y: -100,
+        zIndex: 99 - (1 * i),
+    })
+}
 
 const GalleryCard = ({id, name, images, artist}) => {
     const { setPainting } = useContext(Context);
 
     return (
         <motion.div
-            // key={id}
-            // custom={id}
-            // initial="initial"
-            // animate="visible"
-            // exit={{ opacity: 0 }}
-            // variants={variants}
+            key={id}
+            custom={id}
+            initial="initial"
+            animate="visible"
+            exit={{ opacity: 0 }}
+            variants={variants}
         >
             <GalleryItem to="/slideshow" onClick={() => setPainting(id)}>
                     <figure>
