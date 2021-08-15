@@ -1,6 +1,7 @@
 import React from 'react'
 import { ImageStyles } from '../../styles/slideshow/ImageStyles';
 import SlideshowCaption from './SlideshowCaption';
+import ViewImageButton from './ViewImageButton';
 
 const SlideshowImages = ({name, artist, images}) => {
     return (
@@ -14,6 +15,7 @@ const SlideshowImages = ({name, artist, images}) => {
                 <div className="artist-desktop">
                         <img className="artist-image" src={artist.image} alt={artist.name} />
                 </div>
+            <ViewImageButton />
             </figure>
         </ImageStyles>
     )
