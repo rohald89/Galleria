@@ -6,6 +6,8 @@ export const GalleryItem = styled(Link)`
     
     img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
         transition: opacity .2s ease-in;
         &:hover {
             opacity: 0.5;
