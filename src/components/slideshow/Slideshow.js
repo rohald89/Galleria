@@ -8,6 +8,7 @@ import data from '../../data/data.json';
 import SlideshowNav from './SlideshowNav';
 import SlideshowImages from './SlideshowImages';
 import SlideshowInformation from './SlideshowInformation';
+import Modal from './Modal';
 
 
 const variants = {
@@ -32,7 +33,7 @@ const variants = {
   };
 
 const Slideshow = () => {
-    const { painting, page, direction } = useContext(Context);
+    const { openModal, painting, page, direction } = useContext(Context);
     const { images, name, artist, year, description, source } = data[painting] || 0;
 
     const imageIndex = wrap(0, data.length, page);
@@ -56,6 +57,7 @@ const Slideshow = () => {
               </SlideshowStyles>
           </AnimatePresence>
           <SlideshowNav/>
+          { openModal && <Modal openModal={openModal}/> }
         </>
     )
 }
