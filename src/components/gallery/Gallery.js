@@ -10,7 +10,6 @@ const macyOptions = {
   container: '#macy-container',
   mobileFirst: true,
   margin: 24,
-  waitForImages: true,
   columns: 1,
   breakAt: {
     1200: 4,
