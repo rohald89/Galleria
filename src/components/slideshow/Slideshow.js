@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
-// import { Link } from 'react-router-dom';
-import { SlideshowImages, SlideshowStyles, SlideshowInformation } from '../../styles/slideshow/SlideshowStyles';
+import { SlideshowStyles } from '../../styles/slideshow';
 import { AnimatePresence } from 'framer-motion';
 import { wrap } from "popmotion";
 
 import { Context } from '../../context';
 import data from '../../data/data.json';
 import SlideshowNav from './SlideshowNav';
+import SlideshowImages from './SlideshowImages';
+import SlideshowInformation from './SlideshowInformation';
+
 
 const variants = {
     enter: (direction) => {
@@ -31,50 +33,29 @@ const variants = {
 
 const Slideshow = () => {
     const { painting, page, direction } = useContext(Context);
-    const { images, name, artist, year, description, source } = data[painting];
+    const { images, name, artist, year, description, source } = data[painting] || 0;
 
     const imageIndex = wrap(0, data.length, page);
 
     return (
         <>
-        <AnimatePresence exitBeforeEnter initial={false} custom={direction}>
-            <SlideshowStyles
-                key={page}
-                src={images[imageIndex]}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                
-                transition={{ delay: 0, duration: 0.3, type: "tween" }}
-            >
-                <SlideshowImages>
-                    <figure>
-                        <picture>
-                            <source srcSet={images.hero.large} media="(min-width: 750px)"/>
-                            <img src={images.hero.small} alt={name} />
-                        </picture>
-                        <figcaption>
-                            <h2>{name}</h2>
-                            <p>{artist.name}</p>
-                            <div className="artist-mobile">
-                                <img className="artist-image" src={artist.image} alt={artist.name} />
-                            </div>
-                        </figcaption>
-                        <div className="artist-desktop">
-                                <img className="artist-image" src={artist.image} alt={artist.name} />
-                        </div>
-                    </figure>
-                </SlideshowImages>
-                <SlideshowInformation>
-                    <span>{year}</span>
-                    <p>{description}</p>
-                    <a href={source}>Go to source</a>
-                </SlideshowInformation>
-            </SlideshowStyles>
-        </AnimatePresence>
-        <SlideshowNav/>
+          <AnimatePresence exitBeforeEnter initial={false} custom={direction}>
+              <SlideshowStyles
+                  key={page}
+                  src={images[imageIndex]}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  
+                  transition={{ delay: 0, duration: 0.3, type: "tween" }}
+              >
+                  <SlideshowImages name={name} artist={artist} images={images}/>
+                  <SlideshowInformation year={year} description={description} source={source} />
+              </SlideshowStyles>
+          </AnimatePresence>
+          <SlideshowNav/>
         </>
     )
 }
