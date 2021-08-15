@@ -9,6 +9,7 @@ import SlideshowNav from './SlideshowNav';
 import SlideshowImages from './SlideshowImages';
 import SlideshowInformation from './SlideshowInformation';
 import Modal from './Modal';
+import { Seo } from '../Seo';
 
 
 const variants = {
@@ -41,6 +42,7 @@ const Slideshow = () => {
 
     return (
         <>
+        <Seo title={`Galleria | ${name}`} />
           <AnimatePresence exitBeforeEnter initial={false} custom={direction}>
               <SlideshowStyles
                   key={page}
