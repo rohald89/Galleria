@@ -38,6 +38,7 @@ const Slideshow = () => {
 
     const imageIndex = wrap(0, data.length, page);
 
+
     return (
         <>
           <AnimatePresence exitBeforeEnter initial={false} custom={direction}>

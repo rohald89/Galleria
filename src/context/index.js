@@ -6,6 +6,7 @@ export const Provider = (props) => {
   const [painting, setPainting] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const [[page, direction], setPage] = useState([0, 0]);
+  const [slideshow, setSlideshow] = useState(false);
   
   return (
     <Context.Provider value={{ 
@@ -15,7 +16,9 @@ export const Provider = (props) => {
       setOpenModal,
       page,
       direction,
-      setPage
+      setPage,
+      slideshow,
+      setSlideshow
     }}>
       { props.children }
     </Context.Provider>
